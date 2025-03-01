@@ -14,17 +14,23 @@ class HelloWorld
         int kontrol = 0;
         int toplam = 0;
 
-        while(kontrol != -1)
+        while (true)
         {
             kontrol = Convert.ToInt32(Console.ReadLine());
+            if (kontrol == -1) break; 
             sayilar.Add(kontrol);
-
         }
 
-        foreach(int i in sayilar)
+
+        foreach (int i in sayilar)
         {
             toplam += i;
         }
+
+        //ortalamasi
+        int ort = toplam / (sayilar.Count == 0 ? 1 : sayilar.Count);
+        Console.WriteLine("Listenin Ortalamasi: " + ort);
+
 
         // Kucukten buyuge dogru olan kisim
         sayilar.Sort();
@@ -36,6 +42,8 @@ class HelloWorld
             Console.WriteLine(x);
 
         }
+
+
 
     }
 }

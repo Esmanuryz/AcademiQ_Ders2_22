@@ -1,5 +1,6 @@
 ﻿// Task 3
 // (foreach) kişilerin yaş kategorilerini belirleme ( 0-12: Çocuk, 13-19: Genç, 20-64: Yetişkin, 65+: Yaşlı.)
+
 using System;
 using System.Collections.Generic;
 class HelloWorld
@@ -11,8 +12,13 @@ class HelloWorld
 
         List<int> yaslar = new List<int>();
 
-        while(yas != -1) 
+        while(true) 
         {
+
+            if (yas == -1)
+            {
+                break;
+            }
             yas = Convert.ToInt32(Console.ReadLine());
             yaslar.Add(yas);
         }

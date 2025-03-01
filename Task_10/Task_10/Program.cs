@@ -9,7 +9,8 @@ class HelloWorld
     static void Main()
     {
         List<int> sayilar = new List<int>();
-        List<int> silinecekler = new List<int>();
+       // List<int> silinecekler = new List<int>();
+
         sayilar.Add(56);
         sayilar.Add(12);
         sayilar.Add(97);
@@ -22,26 +23,36 @@ class HelloWorld
         sayilar.Add(0);
         sayilar.Add(-78);
 
-        // burada atlama yapiyor mu ? kontrol et
 
-        foreach (int i in sayilar)
+        /* 
+         
+         // burada atlama yapiyor mu ? kontrol et
+         foreach (int i in sayilar)
+         {
+             if(i < 10)
+             {
+                 silinecekler.Add(i);
+             }
+         }
+         foreach(int x in silinecekler)
+         {
+             sayilar.Remove(x);
+
+         }*/
+
+        for (int i = sayilar.Count - 1; i >= 0; i--)
         {
-            if(i < 10)
+            if (sayilar[i] < 10)
             {
-                silinecekler.Add(i);
+                sayilar.RemoveAt(i);
             }
         }
-        foreach(int x in silinecekler)
-        {
-            sayilar.Remove(x);
 
-        }
-
-        Console.WriteLine("10' dan kucuk olan degerler silindiginde olusan dizimiz: ");
+        Console.WriteLine("10’dan küçük olan değerler silindiğinde oluşan liste:");
         foreach (int y in sayilar)
         {
             Console.Write(y + " ");
-
         }
+       
     }
 }

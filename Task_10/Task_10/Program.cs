@@ -1,5 +1,5 @@
 ﻿
-// Task 4
+// Task 10
 // Bir sayı listesinde 10’dan küçük olanları silen uygulama
 
 
